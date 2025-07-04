@@ -1,14 +1,37 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
+import { Meteors } from '@/components/ui/meteors';
 
 const Home = () => {
+  const [ dev, setDev] = useState(false);
+  
+  const Development = () => {
+      setDev(true)
+  }
+
   return (
-    <div className='flex flex-col items-center bg-emerald-950 w-[50%] h-[60%] p-4 m-auto mt-20 rounded-xl'>
-      <h1>Thanks for Checking by, am currently Developing this site.</h1>
-      <p>Contact Me:</p>
-      <p>info@stackymedia.com</p>
-      <p>josephmmakaro@gmail.com</p>
+    <div>
+      {Development ? (<Metero/>) : (<homePage/>)}
     </div>
   )
 }
 
 export default Home
+
+
+// This Loads Home Page component
+const homePage = () => {
+  return(
+    <div>
+      <h1>Welcome to Home!</h1>
+    </div>
+  )
+}
+
+// This Loads Coming-Soon Page Component
+const Metero = () => {
+  return(
+    <Metero/>
+  )
+}

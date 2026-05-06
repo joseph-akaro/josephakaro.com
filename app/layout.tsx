@@ -1,8 +1,12 @@
 import "./globals.css";
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata = {
-  title: "Akaro Softwares",
-  description: "Websites that help businesses grow",
+  title: "Joseph Akaro",
+  description: "Full Stack Developer with specilization in backend and system architecture",
 };
 
 export default function RootLayout({
@@ -11,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="bg-gradient-to-br from-gray-50 to-gray-200 text-gray-900">
+    <html lang="en" className={cn("font-sans dark", geist.variable)}>
+      <body className="text-primary">
         {children}
       </body>
     </html>

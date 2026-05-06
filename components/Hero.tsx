@@ -3,13 +3,14 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 import Inquiry from "./forms/Inquiry";
 import { form } from "./Header";
-import { Linkedin } from "@hugeicons/core-free-icons";
+
 import Link from "next/link";
+import { Linkedin, Github, Youtube } from "@boxicons/react"
 
 export default function Hero() {
 
   return (
-    <section className="flex flex-row items-center justify-between p-10">
+    <section className="flex flex-row items-center justify-between px-20">
       <div className="flex flex-col max-w-lg gap-2 text-left py-24 px-6 fade-up">
         <h2 className="text-lg">Hello!👋🏾 I am</h2>
         <h1 className="text-5xl font-bold">JOSEPH AKARO</h1>
@@ -35,9 +36,15 @@ export default function Hero() {
         <div className="flex flex-row gap-4 w-full items-start mt-10">
           <p>Follow Me on</p>
           <div className="flex gap-4">
-            <Link href={'#'}>LinkedIn</Link>
-            <Link href={'#'}>GitHub</Link>
-            <Link href={'#'}>YouTube</Link>
+            <Link href={'https://www.linkedin.com/in/josephakaro/'}>
+              <Linkedin />
+            </Link>
+            <Link href={'https://github.com/joseph-akaro'}>
+              <Github />
+            </Link>
+            <Link href={'https://www.youtube.com/@josephakaro'}>
+              <Youtube />
+            </Link>
           </div>
       </div>
       </div>

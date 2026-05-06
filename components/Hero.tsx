@@ -6,6 +6,7 @@ import { form } from "./Header";
 
 import Link from "next/link";
 import { Linkedin, Github, Youtube } from "@boxicons/react"
+import { Briefcase } from "lucide-react";
 
 export default function Hero() {
 
@@ -20,7 +21,7 @@ export default function Hero() {
           My work spans full-stack development, WordPress engineering, API integrations, and open-source projects that empower businesses and developers across East Africa.
         </p>
         <div className="flex flex-row items-start justify-start gap-4 w-full mt-4">
-            <Button variant={"outline"} className="font-italic">View My Work</Button>
+            <Button variant={"outline"} className="font-italic"><span className="flex mr-2">View My Work</span><Briefcase /></Button>
             <Inquiry
                 name={form.name}
                 email={form.email}

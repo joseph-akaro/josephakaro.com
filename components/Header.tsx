@@ -28,7 +28,7 @@ export const form = {
     projectDecription: "Briefly describe what you want to build or need help with",
     budgetRange: ["Under $300", "$300 – $1,000", "$1,000+", "Not sure yet"],
     projectTimeline: ["Just exploring", "Within 1 month", "1–3 months", "Urgent"],
-    referenceLink: "Link to references or examples",
+    referenceLink: "https://google.com",
     buttonName: "Discuss My Project",
 }
 

@@ -23,8 +23,9 @@ import {
 
 import { Textarea } from "../ui/textarea";
 
-import { Field, FieldGroup } from "@/components/ui/field"
+import { Field, FieldDescription, FieldGroup } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
+import { Briefcase, MessageBubble } from "@boxicons/react";
 
 interface Contact{
     name: string;
@@ -47,7 +48,7 @@ export default function Inquiry({...props}: Contact) {
             </DialogTrigger>
             <DialogContent className="sm:max-w-sm">
                 <DialogHeader className="text-center">
-                    <DialogTitle>Let's Talk!</DialogTitle>
+                    <DialogTitle className="text-primary">Let's Talk!</DialogTitle>
                     <DialogDescription>Tell me a bit about your project. I’ll get back to you within 24–48 hours.</DialogDescription>
                 </DialogHeader>
                 <FieldGroup>
@@ -65,12 +66,14 @@ export default function Inquiry({...props}: Contact) {
                     </Field>
                     <Field>
                         <SelectField placeholder="Select project budget range" options={props.budgetRange} />
+                        <FieldDescription className="italic text-sm">Projects typically start from $300</FieldDescription>
                     </Field>
                     <Field>
                         <SelectField placeholder="Select project timeline" options={props.projectTimeline} />
                     </Field>
                     <Field>
                         <Input id="referenceLink" name="referenceLink" placeholder={props.referenceLink} />
+                        <FieldDescription className="italic text-sm">Reference link to similar project ideas</FieldDescription>
                     </Field>
                 </FieldGroup>
                 <DialogFooter>

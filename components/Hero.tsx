@@ -11,16 +11,16 @@ export default function Hero() {
 
   return (
     <section className="flex flex-row items-center justify-between px-20">
-      <div className="flex flex-col max-w-lg gap-2 text-left py-24 px-6 fade-up">
+      <div className="flex flex-col max-w-lg gap-2 text-left py-24 px-6">
         <h2 className="text-lg">Hello!👋🏾 I am</h2>
         <h1 className="text-5xl font-bold">JOSEPH AKARO</h1>
         <h2 className="text-xl">Software Engineer | Open-Source Contributor</h2>
-        <p className="text-muted">
+        <p className="text-muted-foreground">
           I’m a passionate software engineer focused on building clean, scalable, and reliable digital solutions.
           My work spans full-stack development, WordPress engineering, API integrations, and open-source projects that empower businesses and developers across East Africa.
         </p>
         <div className="flex flex-row items-start justify-start gap-4 w-full mt-4">
-            <Button variant={"outline"} className="font-italic">View Portfolio</Button>
+            <Button variant={"outline"} className="font-italic">View My Work</Button>
             <Inquiry
                 name={form.name}
                 email={form.email}

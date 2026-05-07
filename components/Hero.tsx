@@ -36,7 +36,7 @@ export default function Hero() {
 
         <div className="flex flex-row gap-4 w-full items-start mt-10">
           <p>Follow Me on</p>
-          <div className="flex gap-4">
+          <div className="flex gap-4 items-center justify-center">
             <Link href={'https://www.linkedin.com/in/josephakaro/'}>
               <Linkedin />
             </Link>

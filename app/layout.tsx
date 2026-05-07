@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
+import Header from "@/components/Header";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -17,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("font-sans dark", geist.variable)}>
       <body className="text-primary">
+        <Header />
         {children}
       </body>
     </html>

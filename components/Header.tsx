@@ -16,8 +16,8 @@ const NavLink = [
         url: "projects"
     },
     {
-        title: "Pricing",
-        url: "pricing"
+        title: "Blog",
+        url: "blog"
     }
 ]
 

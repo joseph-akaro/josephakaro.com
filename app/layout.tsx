@@ -18,7 +18,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("font-sans dark", geist.variable)}>
       <body className="text-primary">
-        <Header />
         {children}
       </body>
     </html>

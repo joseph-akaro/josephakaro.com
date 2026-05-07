@@ -1,6 +1,6 @@
-"use client";
 import Link from "next/link";
 import Inquiry from "./forms/Inquiry";
+import { Button } from "./ui/button";
 
 const NavLink = [
     {
@@ -56,6 +56,9 @@ export default function Header() {
                     referenceLink={form.referenceLink}
                     buttonName={form.buttonName}
                 />
+                <Button variant={"outline"}>
+                    <Link href={'/auth/login'}>Login</Link>
+                </Button>
             </ul>
         </nav>
     );

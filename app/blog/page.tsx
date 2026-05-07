@@ -1,9 +1,10 @@
 import ComingSoon from "@/components/coming-soon";
-import Hero from "@/components/Hero";
+import Header from "@/components/Header";
 
 export default function Blog() {
   return (
     <main>
+      <Header />
       <ComingSoon />
     </main>
   );

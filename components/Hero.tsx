@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
-import Inquiry from "./forms/Inquiry";
 import { form } from "./Header";
 
 import Link from "next/link";
 import { Linkedin, Github, Youtube } from "@boxicons/react"
 import { Briefcase } from "lucide-react";
+import Contact from "./forms/Contact";
 
 export default function Hero() {
 
@@ -21,13 +21,14 @@ export default function Hero() {
         </p>
         <div className="flex flex-row items-start justify-start gap-4 w-full mt-4">
             <Button variant={"outline"} className="font-italic"><span className="flex mr-2">View My Work</span><Briefcase /></Button>
-            <Inquiry
+            <Contact
                 name={form.name}
                 email={form.email}
-                inquiryType={form.inquiryType}
-                projectDecription={form.projectDecription}
-                budgetRange={form.budgetRange}
-                projectTimeline={form.projectTimeline}
+                phone={form.phone}
+                type={form.type}
+                description={form.description}
+                budget={form.budget}
+                timeline={form.timeline}
                 referenceLink={form.referenceLink}
             />
         </div>

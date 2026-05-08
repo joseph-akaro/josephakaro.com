@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Inquiry from "./forms/Inquiry";
 import { Button } from "./ui/button";
 import { createClient } from "@/lib/supabase/server";
+import Contact from "./forms/Contact";
 
 const NavLink = [
     {
@@ -25,10 +25,11 @@ const NavLink = [
 export const form = {
     name: "What's your name?",
     email: "Email address (required)",
-    inquiryType: ["New Project", "Existing Project Help", "Consultation", "Other"],
-    projectDecription: "Briefly describe what you want to build or need help with",
-    budgetRange: ["Under $300", "$300 – $1,000", "$1,000+", "Not sure yet"],
-    projectTimeline: ["Just exploring", "Within 1 month", "1–3 months", "Urgent"],
+    phone: "+211 920333207",
+    type: ["New Project", "Existing Project", "Consultation", "Other"],
+    description: "Briefly describe what you want to build or need help with",
+    budget: ["Under $300", "$300 – $1,000", "$1,000+", "Not sure yet"],
+    timeline: ["Just exploring", "Within 1 month", "1–3 months", "Urgent"],
     referenceLink: "https://google.com",
     buttonName: "Discuss My Project",
 }
@@ -52,13 +53,14 @@ export  default async function Header() {
                     </li>
                 ))
                 }
-                <Inquiry
+                <Contact
                     name={form.name}
                     email={form.email}
-                    inquiryType={form.inquiryType}
-                    projectDecription={form.projectDecription}
-                    budgetRange={form.budgetRange}
-                    projectTimeline={form.projectTimeline}
+                    phone={form.phone}
+                    type={form.type}
+                    description={form.description}
+                    budget={form.budget}
+                    timeline={form.timeline}
                     referenceLink={form.referenceLink}
                 />
                 <Button variant={"outline"}>

@@ -12,11 +12,12 @@ export type contactType = {
     name: string;
     email: string;
     phone: string;
-    type: string;
-    description: string | null;
-    budget: string;
-    timeline: string;
+    type: string[];
+    description: string;
+    budget: string[];
+    timeline: string[];
     referenceLink?: string;
+    options?: string[]
 }
 
 // TODO: On Project Initialised -> contactType <- projectType

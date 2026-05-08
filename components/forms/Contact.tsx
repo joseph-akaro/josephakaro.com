@@ -22,10 +22,9 @@ import { Textarea } from "../ui/textarea";
 
 import { Field, FieldDescription, FieldGroup } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
+import { contactType } from "@/lib/type";
 
-import { Inquiry as InquiryType } from "@/types/Inquiry.type";
-
-export default function Inquiry({...props}: InquiryType) {
+export default function Contact({...props }: contactType) {
 
     return (
         <Dialog>
@@ -45,18 +44,23 @@ export default function Inquiry({...props}: InquiryType) {
                         <Field>
                             <Input id="email" name="email" placeholder="name@example.com" />
                         </Field>
+                        <div className="flex gap-4 w-full md:flex-row flex-col">
+                            <Field>
+                                <SelectField placeholder="Select inquiry type" options={props.type}/>
+                            </Field>
+                            <Field>
+                                <Input id="phone" name="phone" placeholder="+211 920333207" />
+                            </Field>
+                        </div>
                         <Field>
-                            <SelectField placeholder="Select inquiry type" options={props.inquiryType}/>
+                            <Textarea name="description" placeholder={props.description} />
                         </Field>
                         <Field>
-                            <Textarea name="projectDescription" placeholder={props.projectDecription} />
-                        </Field>
-                        <Field>
-                            <SelectField placeholder="Select project budget range" options={props.budgetRange} />
+                            <SelectField placeholder="Select project budget range" options={props.budget} />
                             <FieldDescription className="italic text-sm">Projects typically start from $300</FieldDescription>
                         </Field>
                         <Field>
-                            <SelectField placeholder="Select project timeline" options={props.projectTimeline} />
+                            <SelectField placeholder="Select project timeline" options={props.timeline} />
                         </Field>
                         <Field>
                             <Input id="referenceLink" name="referenceLink" placeholder={props.referenceLink} />

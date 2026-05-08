@@ -51,13 +51,6 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
     setIsLoading(true)
     setError(null)
 
-    await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: {
-        redirectTo: `/dashboard`,
-      },
-    })
-
     try {
       const { error } = await supabase.auth.signInWithPassword({
         email,

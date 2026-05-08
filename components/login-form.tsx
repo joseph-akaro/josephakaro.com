@@ -24,25 +24,25 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
 
-  const handleGoogleLogin = async () => {
-      const supabase = createClient()
-      setIsLoading(true)
-      setError(null)
+  // const handleGoogleLogin = async () => {
+  //     const supabase = createClient()
+  //     setIsLoading(true)
+  //     setError(null)
 
-      try {
-        const { error } = await supabase.auth.signInWithOAuth({
-          provider: 'google',
-          options: {
-            redirectTo: `${window.location.origin}/auth/oauth?next=/dashboard`,
-          },
-        })
+  //     try {
+  //       const { error } = await supabase.auth.signInWithOAuth({
+  //         provider: 'google',
+  //         options: {
+  //           redirectTo: `${window.location.origin}/auth/oauth?next=/dashboard`,
+  //         },
+  //       })
 
-        if (error) throw error
-      } catch (error: unknown) {
-        setError(error instanceof Error ? error.message : 'An error occurred')
-        setIsLoading(false)
-      }
-    }
+  //       if (error) throw error
+  //     } catch (error: unknown) {
+  //       setError(error instanceof Error ? error.message : 'An error occurred')
+  //       setIsLoading(false)
+  //     }
+  //   }
 
 
   const handleLogin = async (e: React.FormEvent) => {
@@ -110,7 +110,7 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
               <Button type="submit" className="w-full" disabled={isLoading}>
                 {isLoading ? 'Logging in...' : 'Login'}
               </Button>
-              <Button
+              {/* <Button
                 type="button"
                 variant="outline"
                 className="w-full"
@@ -118,7 +118,7 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
                 onClick={handleGoogleLogin}
               >
                 {isLoading ? 'Redirecting...' : 'Sign in with Google'}
-              </Button>
+              </Button> */}
             </div>
             <div className="mt-4 text-center text-sm">
               Don&apos;t have an account?{' '}

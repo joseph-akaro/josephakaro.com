@@ -1,4 +1,3 @@
-"use client"
 import Image from "next/image";
 import { Button } from "./ui/button";
 import Inquiry from "./forms/Inquiry";
@@ -30,7 +29,6 @@ export default function Hero() {
                 budgetRange={form.budgetRange}
                 projectTimeline={form.projectTimeline}
                 referenceLink={form.referenceLink}
-                buttonName={form.buttonName}
             />
         </div>
 

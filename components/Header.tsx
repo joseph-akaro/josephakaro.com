@@ -54,7 +54,6 @@ export default function Header() {
                     budgetRange={form.budgetRange}
                     projectTimeline={form.projectTimeline}
                     referenceLink={form.referenceLink}
-                    buttonName={form.buttonName}
                 />
                 <Button variant={"outline"}>
                     <Link href={'/auth/login'}>Login</Link>

@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "@/components/ui/button"
 import {
     Dialog,
@@ -25,23 +23,15 @@ import { Textarea } from "../ui/textarea";
 
 import { Field, FieldDescription, FieldGroup } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
+import createInquiry from "@/app/actions";
 
-interface Contact{
-    name: string;
-    email: string;
-    inquiryType: string[];
-    projectDecription: string;
-    budgetRange: string[];
-    projectTimeline: string[];
-    referenceLink?: string;
-    buttonName?: string;
-}
+import { Inquiry as InquiryType } from "@/types/Inquiry.type";
 
-export default function Inquiry({...props}: Contact) {
+export default function Inquiry({...props}: InquiryType) {
 
     return (
         <Dialog>
-            <form>
+            <form action={createInquiry}>
                 <DialogTrigger type="button" asChild>
                     <Button variant={'default'}>Let's Talk!</Button>
                 </DialogTrigger>
@@ -52,7 +42,7 @@ export default function Inquiry({...props}: Contact) {
                     </DialogHeader>
                     <FieldGroup>
                         <Field>
-                            <Input id="name-1" name={props.name} placeholder="What's your name?" />
+                            <Input id="name" name="name" placeholder="What's your name?" />
                         </Field>
                         <Field>
                             <Input id="email" name="email" placeholder="name@example.com" />
@@ -61,7 +51,7 @@ export default function Inquiry({...props}: Contact) {
                             <SelectField placeholder="Select inquiry type" options={props.inquiryType}/>
                         </Field>
                         <Field>
-                            <Textarea placeholder={props.projectDecription} />
+                            <Textarea name="projectDescription" placeholder={props.projectDecription} />
                         </Field>
                         <Field>
                             <SelectField placeholder="Select project budget range" options={props.budgetRange} />
@@ -76,7 +66,7 @@ export default function Inquiry({...props}: Contact) {
                         </Field>
                     </FieldGroup>
                     <DialogFooter>
-                        <Button type="submit" variant={"default"} className="w-full">{props.buttonName}</Button>
+                        <Button type="submit" variant={"default"} className="w-full">Discuss My Project</Button>
                     </DialogFooter>
                 </DialogContent>
             </form>

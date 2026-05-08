@@ -1,9 +1,9 @@
 export type Inquiry = {
     name: string;
     email: string;
-    inquiryType: string[] | string;
+    inquiryType: string[];
     projectDecription: string;
-    budgetRange: string[] | string;
-    projectTimeline: string[] | string;
+    budgetRange: string[];
+    projectTimeline: string[];
     referenceLink?: string | undefined;
 }

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Inquiry from "./forms/Inquiry";
 import { Button } from "./ui/button";
+import { createClient } from "@/lib/supabase/server";
 
 const NavLink = [
     {
@@ -32,7 +33,12 @@ export const form = {
     buttonName: "Discuss My Project",
 }
 
-export default function Header() {
+export  default async function Header() {
+
+    const supabase = createClient()
+
+    const session = await  (await supabase).auth.getSession()
+
     return (
         <nav className="flex flex-row w-full items-center justify-between p-6">
             <Link href={'/'} className="font-bold text-xl">
@@ -56,7 +62,9 @@ export default function Header() {
                     referenceLink={form.referenceLink}
                 />
                 <Button variant={"outline"}>
-                    <Link href={'/auth/login'}>Login</Link>
+                    {
+                        session ? <Link href={'/dashboard'}>Dashboard</Link> : <Link href={'/auth/login'}>Login</Link> 
+                    }
                 </Button>
             </ul>
         </nav>

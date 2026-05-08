@@ -120,13 +120,10 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
                 {isLoading ? 'Redirecting...' : 'Sign in with Google'}
               </Button> */}
             </div>
-            <div className="mt-4 text-center text-sm">
-              Don&apos;t have an account?{' '}
-              <Link href="/auth/sign-up" className="underline underline-offset-4">
-                Sign up
-              </Link>
-            </div>
           </form>
+             <Button variant={'outline'} className='w-full mt-5'>
+                <Link href={'/'}>Back Home</Link>
+              </Button>
         </CardContent>
       </Card>
     </div>

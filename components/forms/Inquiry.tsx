@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button"
 import {
     Dialog,
-    DialogClose,
     DialogContent,
     DialogDescription,
     DialogFooter,
@@ -23,7 +22,6 @@ import { Textarea } from "../ui/textarea";
 
 import { Field, FieldDescription, FieldGroup } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
-import createInquiry from "@/app/actions";
 
 import { Inquiry as InquiryType } from "@/types/Inquiry.type";
 
@@ -31,7 +29,7 @@ export default function Inquiry({...props}: InquiryType) {
 
     return (
         <Dialog>
-            <form action={createInquiry}>
+            <form>
                 <DialogTrigger type="button" asChild>
                     <Button variant={'default'}>Let's Talk!</Button>
                 </DialogTrigger>

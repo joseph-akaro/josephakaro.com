@@ -82,7 +82,7 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
                 <Input
                   id="email"
                   type="email"
-                  placeholder="m@example.com"
+                  placeholder="username@example.com"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -121,7 +121,7 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
               </Button> */}
             </div>
           </form>
-             <Button variant={'outline'} className='w-full mt-5'>
+              <Button variant={'outline'} className='w-full mt-5'>
                 <Link href={'/'}>Back Home</Link>
               </Button>
         </CardContent>

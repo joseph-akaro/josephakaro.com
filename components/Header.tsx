@@ -5,20 +5,24 @@ import Contact from "./forms/Contact";
 
 const NavLink = [
     {
-        title: "Home",
-        url: "/"
+        title: "About",
+        url: "#about"
     },
     {
-        title: "About Me",
-        url: "about"
+        title: "Skills",
+        url: "#skills"
     },
     {
         title: "Projects",
-        url: "projects"
+        url: "#projects"
+    },
+    {
+        title: "Experiences",
+        url: "experiences"
     },
     {
         title: "Blog",
-        url: "blog"
+        url: "#blog"
     }
 ]
 
@@ -38,12 +42,12 @@ export  default async function Header() {
 
     const supabase = createClient()
 
-    const session = await  (await supabase).auth.getSession()
+    const session = (await supabase).auth.getUser()
 
     return (
         <nav className="flex flex-row w-full items-center justify-between p-6">
             <Link href={'/'} className="font-bold text-xl">
-                JOSEPH AKARO
+                <span className="text-foreground">J</span>A
             </Link>
             <ul className="flex flex-row gap-4 items-center">
                 {
@@ -63,10 +67,8 @@ export  default async function Header() {
                     timeline={form.timeline}
                     referenceLink={form.referenceLink}
                 />
-                <Button variant={"outline"}>
-                    {
-                        session ? <Link href={'/dashboard'}>Dashboard</Link> : <Link href={'/auth/login'}>Login</Link> 
-                    }
+                <Button variant={"default"}>
+                    <Link href={'/dashboard'}>{!session ? "Login" : "Dashboard"}</Link>
                 </Button>
             </ul>
         </nav>

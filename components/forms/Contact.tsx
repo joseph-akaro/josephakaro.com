@@ -23,6 +23,7 @@ import { Textarea } from "../ui/textarea";
 import { Field, FieldDescription, FieldGroup } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 import { contactType } from "@/lib/type";
+import { Send } from "lucide-react";
 
 export default function Contact({...props }: contactType) {
 
@@ -30,7 +31,7 @@ export default function Contact({...props }: contactType) {
         <Dialog>
             <form>
                 <DialogTrigger type="button" asChild>
-                    <Button variant={'default'}>Let's Talk!</Button>
+                    <Button variant={'outline'}>Contact</Button>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-sm">
                     <DialogHeader className="text-center">

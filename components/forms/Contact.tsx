@@ -40,21 +40,21 @@ export default function Contact({...props }: contactType) {
                     </DialogHeader>
                     <FieldGroup>
                         <Field>
-                            <Input id="name" name="name" placeholder="What's your name?" />
+                            <Input className="caret-primary" id="name" name="name" placeholder="What's your name?" />
                         </Field>
                         <Field>
-                            <Input id="email" name="email" placeholder="name@example.com" />
+                            <Input className="caret-primary" id="email" name="email" placeholder="name@example.com" />
                         </Field>
                         <div className="flex gap-4 w-full md:flex-row flex-col">
                             <Field>
                                 <SelectField placeholder="Select inquiry type" options={props.type}/>
                             </Field>
                             <Field>
-                                <Input id="phone" name="phone" placeholder="+211 920333207" />
+                                <Input className="caret-primary" id="phone" name="phone" placeholder="+211 920333207" />
                             </Field>
                         </div>
                         <Field>
-                            <Textarea name="description" placeholder={props.description} />
+                            <Textarea className="caret-primary" name="description" placeholder={props.description} />
                         </Field>
                         <Field>
                             <SelectField placeholder="Select project budget range" options={props.budget} />
@@ -64,7 +64,7 @@ export default function Contact({...props }: contactType) {
                             <SelectField placeholder="Select project timeline" options={props.timeline} />
                         </Field>
                         <Field>
-                            <Input id="referenceLink" name="referenceLink" placeholder={props.referenceLink} />
+                            <Input id="referenceLink" className="caret-primary" name="referenceLink" placeholder={props.referenceLink} />
                             <FieldDescription className="italic text-sm">Reference link to similar project ideas</FieldDescription>
                         </Field>
                     </FieldGroup>

@@ -1,69 +1,164 @@
-import { Aws, Css3, Docker, Firebase, Git, Html5, Javascript, Mongodb, MySql, NeonTech, NextJs, Nodejs, Php, Postgresql, Python, ReactIcon, Supabase, TailwindCss, Vercel, Wordpress } from "@boxicons/react";
-import { CardTitle, Card, CardContent } from "./ui/card";
+import { Auth0, Aws, Css3, Docker, Firebase, Flask, Git, Html5, Javascript, Mongodb, MySql, NeonTech, NextJs, Nodejs, Php, Postgresql, Python, ReactIcon, Supabase, TailwindCss, Vercel, ViteJs, Wordpress } from "@boxicons/react";
+import { CardTitle, Card, CardContent, CardHeader, CardDescription, CardAction, CardFooter } from "./ui/card";
 import React from "react";
-import { title } from "process";
 
 interface stackProp {
   title: string;
   icons: React.ReactNode
 }
 
-const stack = {
-  frontend: {
-    title: "FRONTEND",
-    icons: [
-      <ReactIcon className="w-10 h-10 bg-primary/20 text-primary rounded-md p-1"/>,
-      <NextJs className="w-10 h-10 bg-primary/20 text-primary rounded-md p-1"/>,
-      <TailwindCss className="w-10 h-10 bg-primary/20 text-primary rounded-md p-1"/>,
-      <Html5 className="w-10 h-10 bg-primary/20 text-primary rounded-md p-1"/>,
-      <Css3 className="w-10 h-10 bg-primary/20 text-primary rounded-md p-1"/>,
-      <Javascript className="w-10 h-10 bg-primary/20 text-primary rounded-md p-1"/>
-    ]
-  },
-  backend: {
-    title: "BACKEND",
-    icons: [
-      <Nodejs className="w-10 h-10 bg-primary/20 text-primary rounded-md p-1"/>,
-      <Php className="w-10 h-10 bg-primary/20 text-primary rounded-md p-1"/>,
-      <Python className="w-10 h-10 bg-primary/20 text-primary rounded-md p-1"/>,
-      <Wordpress className="w-10 h-10 bg-primary/20 text-primary rounded-md p-1"/>
-    ]
-  },
-  devops: {
-    title: "TOOLS & DEVOPS",
-    icons: [
-      <Git className="w-10 h-10 bg-primary/20 text-primary rounded-md p-1"/>,
-      <Docker className="w-10 h-10 bg-primary/20 text-primary rounded-md p-1"/>,
-      <Aws className="w-10 h-10 bg-primary/20 text-primary rounded-md p-1"/>,
-      <Vercel className="w-10 h-10 bg-primary/20 text-primary rounded-md p-1"/>,
-      <NeonTech className="w-10 h-10 bg-primary/20 text-primary rounded-md p-1"/>,
-      <Supabase className="w-10 h-10 bg-primary/20 text-primary rounded-md p-1"/>
-    ]
-  },
-  database: {
-    title: "DATABASE",
-    icons:[
-      <MySql className="w-10 h-10 bg-primary/20 text-primary rounded-md p-1"/>,
-      <Postgresql className="w-10 h-10 bg-primary/20 text-primary rounded-md p-1"/>,
-      <Mongodb className="w-10 h-10 bg-primary/20 text-primary rounded-md p-1"/>,
-      <Firebase className="w-10 h-10 bg-primary/20 text-primary rounded-md p-1"/>
-    ]
-  }
-}
-
 export default function Skills() {
 
   return (
-    <section id="skills" className="flex flex-col items-start justify-start gap-10 px-20 h-screen">
+    <section id="skills" className="flex flex-col items-start justify-center gap-10 px-20 h-dvh">
       <div className="flex flex-col gap-2 items-start w-full">
           <h2>// Skills</h2>
           <h1 className="text-4xl"><span className="text-foreground">Tech </span>Stack</h1>
       </div>
-      <div className="grid grid-cols-2 gap-4 w-full">
-        <Stack title={stack.frontend.title} icons={stack.frontend.icons}/>
-        <Stack title={stack.backend.title} icons={stack.backend.icons}/>
-        <Stack title={stack.devops.title} icons={stack.devops.icons}/>
-        <Stack title={stack.database.title} icons={stack.database.icons}/>
+      <div className="w-full grid sm:grid-cols-2 grid-cols-1 gap-6">
+        <Card className="w-full">
+          <CardHeader>
+            <CardTitle>FRONTEND</CardTitle>
+            <CardDescription>
+              Frontend Frameworks and Langauges
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="flex flex-row flex-wrap gap-4">
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <NextJs />
+              <span>Next.js</span>
+            </div>
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <ReactIcon />
+              <span>React</span>
+            </div>
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <ViteJs />
+              <span>Vite</span>
+            </div>
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <Wordpress />
+              <span>WordPress</span>
+            </div>
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <Html5 />
+              <span>Html</span>
+            </div>
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <Css3 />
+              <span>CSS</span>
+            </div>
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <TailwindCss />
+              <span>Tailwind</span>
+            </div>
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <Javascript />
+              <span>Javacript</span>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="w-full">
+          <CardHeader>
+            <CardTitle>BACKEND</CardTitle>
+            <CardDescription>
+              Backend Framework and Services
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="flex flex-row flex-wrap gap-4">
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <Nodejs />
+              <span>Node.js</span>
+            </div>
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <Flask />
+              <span>Flask</span>
+            </div>
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <Php />
+              <span>Php</span>
+            </div>
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <Supabase />
+              <span>Supabase</span>
+            </div>
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <Firebase />
+              <span>Firebase</span>
+            </div>
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <Vercel />
+              <span>Vercel</span>
+            </div>
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <Auth0 />
+              <span>Auth0</span>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="w-full">
+          <CardHeader>
+            <CardTitle>TOOLS</CardTitle>
+            <CardDescription>
+              Tools and Pipelines
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="flex flex-row flex-wrap gap-4">
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <Nodejs />
+              <span>Node.js</span>
+            </div>
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <Flask />
+              <span>Flask</span>
+            </div>
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <Php />
+              <span>Php</span>
+            </div>
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <Supabase />
+              <span>Supabase</span>
+            </div>
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <Firebase />
+              <span>Firebase</span>
+            </div>
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <Vercel />
+              <span>Vercel</span>
+            </div>
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <Auth0 />
+              <span>Auth0</span>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="w-full">
+          <CardHeader>
+            <CardTitle>DATABASES</CardTitle>
+            <CardDescription>
+              Database & Tools
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="flex flex-row flex-wrap gap-4">
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <MySql />
+              <span>MySql</span>
+            </div>
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <Postgresql />
+              <span>Postgresql</span>
+            </div>
+            <div className="flex gap-2 px-1 py-1 bg-muted rounded-md max-w-xl w-26 items-center justify-center hover:text-primary">
+              <NeonTech />
+              <span>Neon</span>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );

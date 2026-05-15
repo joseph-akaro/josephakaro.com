@@ -11,7 +11,7 @@ interface skillCardProp {
 export default function About() {
 
   return (
-    <section id="about" className="flex flex-col items-start justify-start gap-10 px-20 h-screen">
+    <section id="about" className="flex flex-col items-start justify-center gap-10 px-20 h-screen">
       <div className="flex flex-col gap-2">
           <h2>// about <span className="text-primary">me</span></h2>
           <h1 className="text-4xl"><span className="text-foreground">Crafting Digital</span> Experiences</h1>

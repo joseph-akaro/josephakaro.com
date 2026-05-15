@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={cn("font-sans dark", geist.variable)}>
-      <body className="text-primary">
+      <body className="text-primary scrollbar-thumb-primary scrollbar-track-primary">
         {children}
       </body>
     </html>

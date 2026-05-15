@@ -11,7 +11,7 @@ import Contact from "./forms/Contact";
 export default function Hero() {
 
   return (
-    <section className="flex flex-row items-center justify-between px-20 h-screen">
+    <section className="flex flex-row items-center justify-between px-20 h-dvh">
       <div className="flex flex-col max-w-lg gap-2 text-left py-24 px-6">
         <h2 className="text-lg">Hello!👋🏾 I am</h2>
         <h1 className="text-5xl font-bold">JOSEPH AKARO</h1>

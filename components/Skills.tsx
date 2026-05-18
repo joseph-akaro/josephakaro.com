@@ -10,7 +10,7 @@ interface stackProp {
 export default function Skills() {
 
   return (
-    <section id="skills" className="flex flex-col items-start justify-center gap-10 px-20 h-dvh">
+    <section id="skills" className="flex flex-col sm:items-start items-center justify-center gap-10 sm:px-20 px-10 py-30">
       <div className="flex flex-col gap-2 items-start w-full">
           <h2>// Skills</h2>
           <h1 className="text-4xl"><span className="text-foreground">Tech </span>Stack</h1>

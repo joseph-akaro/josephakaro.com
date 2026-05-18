@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Projects() {
 
   return (
-    <section id="projects" className="flex flex-col items-center justify-center gap-4 sm:px-20 py-30 h-full">
+    <section id="projects" className="flex flex-col items-center justify-center gap-6 sm:px-20 py-20 px-10">
       <div className="flex flex-col gap-2 items-start w-full">
           <h2>// project</h2>
           <h1 className="text-4xl"><span className="text-foreground">Recent </span>Projects</h1>
@@ -48,7 +48,7 @@ export default function Projects() {
         <Card className="max-w-full">
             <CardHeader className="flex flex-col w-full">
               <Link href={"/"} className="object-cover w-full rounded-md">
-                <Image  alt={"Joseph Akaro Image"} src={'/school.png'} className="object-scale-down" width={500} height={500}/>
+                <Image  alt={"Joseph Akaro Image"} src={'/meta.png'} className="object-scale-down" width={500} height={500}/>
               </Link>
               <div className="w-full pt-2">
                 <CardTitle>

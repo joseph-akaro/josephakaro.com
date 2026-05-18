@@ -49,7 +49,7 @@ export  default async function Header() {
             <Link href={'/'} className="font-bold text-xl">
                 <span className="text-foreground">J</span>A
             </Link>
-            <ul className="flex flex-row gap-4 items-center">
+            <ul className="sm:flex flex-row gap-4 items-center hidden">
                 {
                     NavLink.map((link) =>(
                     <li key={link.title}>
